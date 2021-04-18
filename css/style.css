@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+}
+
+/* MAIN */
+.icons-section {
+    background-color: lightgrey;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.icon {
+    background-color: lightskyblue;
+    width: calc( (100% / 5) - 30px);
+    margin-bottom: 20px;
+    text-align: center;
+}
