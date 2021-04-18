@@ -124,6 +124,7 @@ const colors = [
 // Creiamo una select con i tipi di icone e usiamola per filtrare le icone
 
 
+
 // Milestone 1
 
 //1b. creo oggetto jQuery che rappresenti icons-container
@@ -156,6 +157,7 @@ function printIcons (iconsArray, container) {
             </div>
         </div>
 		`;
+
 		//1e. popolo il container appendendo le icone
 		container.append(iconElementHTML);
 	});
