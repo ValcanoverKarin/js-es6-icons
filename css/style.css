@@ -9,9 +9,16 @@
     margin: auto;
 }
 
+header img{
+    height: 30px;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
 /* MAIN */
 .icons-section {
-    background-color: lightgrey;
+    background-color: #dddddd;
+    padding: 10px 10px 0px 10px;
 }
 
 .icons-container {
@@ -21,8 +28,18 @@
 }
 
 .icon {
-    background-color: lightskyblue;
+    background-color: white;
     width: calc( (100% / 5) - 30px);
-    margin-bottom: 20px;
+    margin-bottom: 70px;
     text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.icon i {
+    font-size: 25px;
+}
+
+.text {
+    font-size: 10px;
 }
