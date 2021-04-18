@@ -126,9 +126,9 @@ const colors = [
 
 // Milestone 1
 
-//1b creo oggetto jQuery che rappresenti icons-container
-var iconsContainer = $('icons-container');
-//1a per scrivere tutte le icone disponibili chiamo la funzione printIcons e gli passo icons e iconsContainer
+//1b. creo oggetto jQuery che rappresenti icons-container
+const iconsContainer = $('#icons-container');
+//1a. per scrivere tutte le icone disponibili chiamo la funzione printIcons e gli passo icons e iconsContainer
 printIcons(icons, iconsContainer);
 
 /* FUNZIONE */
@@ -137,5 +137,26 @@ printIcons(icons, iconsContainer);
 //0c. ho bisogno del container dove stamparli
 //0d. il container dovrà essere un oggetto jQuery che rappresenta l' elemnto in cui stampare le icone
 function printIcons (iconsArray, container) {
-	//foreach per scrivere le icone nel container
+	console.log(iconsArray);
+	//1c. foreach per scrivere le icone nel container
+	iconsArray.forEach((element) => {
+		console.log(element);
+		
+		//1f. destrutturo element per leggere le informazioni
+		const {name, prefix, family} = element;
+		
+		//1d. per stamparli mi creo prima la stringa e copio il mio template
+		//1g. cambio fas con family, fa- con prefix e cat,NOME ICONA con name
+		//1h. aggiungo toUppercase a name per farli maiuscoli
+		const iconElementHTML = `
+		<div class="icon">
+            <i class="${family} ${prefix}${name}"></i>
+            <div class="text">
+			    ${name.toUpperCase()}
+            </div>
+        </div>
+		`;
+		//1e. popolo il container appendendo le icone
+		container.append(iconElementHTML);
+	});
 }
